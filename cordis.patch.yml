@@ -1,0 +1,5 @@
+# dsh-assistant-bubble bundle patch：只登记一个 host 行。
+# 浏览器半区由 package.json 的 dsh.client 声明（platform: web）单独装载。
+- insert:
+    - id: assistant-bubble
+      name: 'dsh-assistant-bubble'

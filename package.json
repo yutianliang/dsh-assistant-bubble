@@ -1,0 +1,49 @@
+{
+  "name": "dsh-assistant-bubble",
+  "version": "1.0.0",
+  "description": "DSH 助手回复气泡：给助手回复加一层可调的底色，可选液态玻璃材质，并让工具条、过程行、统计行等周边信息同步。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "ui",
+    "bubble",
+    "glass",
+    "theme"
+  ],
+  "author": "yutianliang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yutianliang/dsh-assistant-bubble.git"
+  },
+  "homepage": "https://github.com/yutianliang/dsh-assistant-bubble#readme",
+  "bugs": {
+    "url": "https://github.com/yutianliang/dsh-assistant-bubble/issues"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
