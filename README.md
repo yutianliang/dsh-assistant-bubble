@@ -13,12 +13,9 @@
 
 开启后
 
+气泡透明度之类的可以自己调，单独在设置里开了“助手回复气泡”的分区页。
+
 <img width="1280" height="764" alt="image" src="https://github.com/user-attachments/assets/941f5a4d-1fb2-47cb-8abe-084a82ce1959" />
-
-
-
-
-单独在设置里开了“助手回复气泡”的分区页。
 
 
 ————以下内容都是肥鱼写的
