@@ -1,6 +1,6 @@
 {
   "name": "dsh-assistant-bubble",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "DSH 助手回复气泡：给助手回复加一层可调的底色，可选液态玻璃材质，并让工具条、过程行、统计行等周边信息同步。",
   "type": "module",
   "main": "lib/index.js",

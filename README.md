@@ -1,5 +1,7 @@
 # dsh-assistant-bubble
 
+[![Awesome DSH Plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
+
 使用皮肤插件从wallpaper里导入深色壁纸时，会发现ai回复的文字是无背景的，导致字和壁纸糊在一起无法阅读。所以让大肥鱼单独写了一个小插件实现气泡功能。
 
 这下可以愉快地使用壁纸了。
