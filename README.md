@@ -3,10 +3,19 @@
 使用皮肤插件从wallpaper里导入深色壁纸时，会发现ai回复的文字是无背景的，导致字和壁纸糊在一起无法阅读。所以让大肥鱼单独写了一个小插件实现气泡功能。
 
 这下可以愉快地使用壁纸了。
+
 .
+
 有一些气泡间距的小问题，可能对观感有小影响，但是不太好修，所以就放在那里了，
-效果图
+
+插件开启前
+<img width="1280" height="764" alt="image" src="https://github.com/user-attachments/assets/403ed1dc-a3a7-4eb3-98a2-79f60f1386eb" />
+
+开启后
+
 <img width="1280" height="764" alt="image" src="https://github.com/user-attachments/assets/941f5a4d-1fb2-47cb-8abe-084a82ce1959" />
+
+
 
 
 单独在设置里开了“助手回复气泡”的分区页。
