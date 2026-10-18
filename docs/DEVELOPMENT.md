@@ -68,6 +68,27 @@ CSS 部分靠读宿主 `app.asar` 里的源码核对锚点与层叠特异性（�
 
 ## 更新记录
 
+### 1.3.0
+
+- **新增：非会话页面铺底**。开皮肤后「插件」「自动化任务」「技能中心」「上下文洞察」等独立页面的文字会糊在壁纸上，
+  现在用**一条通用规则**处理：
+  ```css
+  body[data-dab-page] [class*="_centerCol"] [data-slot]:not([data-slot*="conversation"]) > * {
+    background: rgba(var(--dab-solid-color), var(--dab-page-alpha, 0.6)) !important;
+  }
+  ```
+  要求：页面根挂在中间列（`*_centerCol`）内、`[data-slot]` 包裹层之下；会话里的消息也包在 `[data-slot]` 里
+  （`conversation.chat.node`），所以必须按 slot 名排除 —— 否则整个聊天区都会被铺底（踩过这个坑）。
+- **新增设置项**：可折叠分组「非会话页面底色」，折叠态一行（标题 + 开/关 · 浓度 + 右侧三角），
+  展开后是开关与浓度滑块；数据存在 `settings.page = { enabled, alpha }`，浓度用独立变量 `--dab-page-alpha`。
+- 一些结构性经验：
+  | 坑 | 结论 |
+  | --- | --- |
+  | 用 `[class*="_page"]` 匹配页面根 | 会把 `_pageTitle`/`_pageHead` 一起命中 ⇒ 文字周围出现白方框；改用 `[class$="_page"]`（后缀精确） |
+  | 只按 `[data-slot] > *` 选 | 会话消息节点也在 slot 里 ⇒ 必须 `:not([data-slot*="conversation"])` |
+  | 第三方页面（技能中心） | 类名是 CSS-Module 哈希（`ptK59a_view`），升级会变；dsh-context 是手写 kebab（`lc-ov-page`），更稳 |
+  | 会话区里没有 `[data-conversation-scroll]` | 不能用它来识别会话，改用 slot 名 |
+
 ### 1.2.1
 
 - 修「过程分组头」（"已完成分析"）与它下面那一行之间的 0 间距：原先用相邻兄弟选择器
